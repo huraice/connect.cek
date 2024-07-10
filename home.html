@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - connect.cek</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="menu-bar"></div>
+    <div id="greeting-section">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <p>Status: <span id="verification-status"></span></p>
+    </div>
+    <div id="recent-posts" style="display: none;">
+        <h2>Recent Posts</h2>
+        <div id="posts-list"></div>
+    </div>
+    <div id="connect-panel">
+        <h2>Connect with Others</h2>
+        <input type="text" id="search-bar" placeholder="Search users...">
+        <button id="search-btn">Search</button>
+        <div id="recommendations">
+            <h3>Recommended Users</h3>
+            <div id="recommended-users"></div>
+        </div>
+    </div>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

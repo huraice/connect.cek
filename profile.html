@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - connect.cek</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="menu-bar"></div>
+    <h1>Profile</h1>
+    <div id="profile-info">
+        <h2>Current Details</h2>
+        <p>Name: <span id="profile-name"></span></p>
+        <p>Role: <span id="profile-role"></span></p>
+        <div id="alumni-info" style="display: none;">
+            <p>Branch: <span id="alumni-branch"></span></p>
+            <p>Organization: <span id="alumni-org"></span></p>
+            <p>Role in Organization: <span id="alumni-role"></span></p>
+            <p>Passout Year: <span id="alumni-year"></span></p>
+        </div>
+        <div id="student-info" style="display: none;">
+            <p>Branch: <span id="student-branch"></span></p>
+            <p>Admission ID: <span id="student-id"></span></p>
+        </div>
+        <button id="edit-btn">Edit</button>
+    </div>
+    <div id="edit-profile" style="display: none;">
+        <h2>Edit Profile</h2>
+        <form id="edit-profile-form">
+            <input type="text" id="edit-name" placeholder="Name" required>
+            <select id="edit-role">
+                <option value="alumni">Alumni</option>
+                <option value="student">Student</option>
+            </select>
+            <div id="edit-alumni-info" style="display: none;">
+                <input type="text" id="edit-alumni-branch" placeholder="Branch">
+                <input type="text" id="edit-alumni-org" placeholder="Organization">
+                <input type="text" id="edit-alumni-role" placeholder="Role in Organization">
+                <input type="number" id="edit-alumni-year" placeholder="Passout Year">
+            </div>
+            <div id="edit-student-info" style="display: none;">
+                <input type="text" id="edit-student-branch" placeholder="Branch">
+                <input type="text" id="edit-student-id" placeholder="Admission ID">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
